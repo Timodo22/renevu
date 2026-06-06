@@ -1,20 +1,28 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# RENEVU | Bouw - Techniek - Service
 
-# Run and deploy your AI Studio app
+**Dé betrouwbare partner in de regio voor verduurzaming, renovatie, turnkey verbouwingen en 24/7 technische service.**
 
-This contains everything you need to run your app locally.
+Welkom op de officiële website van **Renevu**. Wij zijn gespecialiseerd in hoogwaardige bouwprojecten, technische installaties en uitgebreide service en onderhoud. Of het nu gaat om een complete woningrenovatie, het verduurzamen van een bedrijfspand of snelle hulp bij technische storingen, Renevu staat voor u klaar.
 
-View your app in AI Studio: https://ai.studio/apps/a2a8c403-ea8d-49e1-b094-f904d37976fc
+## Onze Expertise
 
-## Run Locally
+*   **Bouw & Renovatie:** Van uitbouw tot complete turnkey verbouwingen. Wij leveren vakmanschap met oog voor detail.
+*   **Techniek & Verduurzaming:** Installatie van warmtepompen, zonnepanelen, en moderne elektra. Klaar voor de toekomst.
+*   **Service & Onderhoud:** 24/7 bereikbaar voor spoedreparaties, onderhoudscontracten en storingsdiensten.
 
-**Prerequisites:**  Node.js
+## Waarom kiezen voor Renevu?
 
+*   **Alles onder één dak:** Eén aanspreekpunt voor uw gehele project.
+*   **Kwaliteit & Garantie:** Wij werken uitsluitend met A-merk materialen en ervaren vakmensen.
+*   **Transparant:** Duidelijke afspraken, heldere communicatie en geen verrassingen achteraf.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Contact
+
+Neem vandaag nog contact met ons op voor een vrijblijvende offerte of adviesgesprek. 
+
+🌐 **Website:** [www.renevu.nl](#) (Binnenkort online)
+📍 **Werkgebied:** Landelijk met focus op de Randstad
+✉️ **Email:** info@renevu.nl
+
+---
+*Renevu - Bouwen aan de toekomst, met de techniek van morgen en de service van nu.*
