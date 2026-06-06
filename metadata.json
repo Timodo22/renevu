@@ -1,0 +1,6 @@
+{
+  "name": "RENEVU",
+  "description": "Moderne bedrijfswebsite voor bouw, techniek en service bedrijf.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
