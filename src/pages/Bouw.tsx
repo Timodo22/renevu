@@ -4,7 +4,6 @@ import { Home as HomeIcon, CheckCircle2, Wrench, Leaf, ArrowRight } from 'lucide
 import { Link } from 'react-router-dom';
 import bouw1 from '../../assets/voor de bouw.avif';
 import bouw2 from '../../assets/over de bouw 2.webp';
-import bouwVoorgrond from '../../assets/bouw voorgrond.jpg';
 import ruwbouwImg from '../../assets/Ruwbouw.jpg';
 import opgeleverdImg from '../../assets/Opgeleverd.jpg';
 
@@ -37,7 +36,7 @@ export default function Bouw() {
       <HeroSection 
         title="BOUW"
         subtitle="Uniek samenwerkingsverband met lokale bouwbedrijven en onderaannemers voor een efficiënte en kostenbesparende aanpak."
-        image={bouwVoorgrond}
+        image={ruwbouwImg}
       />
 
       <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">

@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import HeroSection from '../components/HeroSection';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
-import contactImg from '../../assets/contact.jpg';
+import contactImg from '../../assets/contact.webp';
 
 export default function Contact() {
   return (
