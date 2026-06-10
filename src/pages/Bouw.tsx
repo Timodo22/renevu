@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import bouw1 from '../../assets/voor de bouw.avif';
 import bouw2 from '../../assets/over de bouw 2.webp';
 import bouwVoorgrond from '../../assets/bouw voorgrond.jpg';
+import ruwbouwImg from '../../assets/Ruwbouw.jpg';
+import opgeleverdImg from '../../assets/Opgeleverd.jpg';
 
 export default function Bouw() {
   const services = [
@@ -66,8 +68,8 @@ export default function Bouw() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="grid grid-cols-2 gap-4 sm:gap-6"
           >
-            <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Renovatie" className="w-full aspect-square object-cover rounded-sm shadow-sm hover:shadow-md transition-shadow" />
-            <img src={bouw1} alt="Voor de bouw 1" className="w-full aspect-square object-cover rounded-sm shadow-sm hover:shadow-md transition-shadow" />
+            <img src={ruwbouwImg} alt="Ruwbouw" className="w-full aspect-square object-cover rounded-sm shadow-sm hover:shadow-md transition-shadow" />
+            <img src={opgeleverdImg} alt="Opgeleverd" className="w-full aspect-square object-cover rounded-sm shadow-sm hover:shadow-md transition-shadow" />
             <img src={bouw2} alt="Voor de bouw 2" className="w-full aspect-square object-cover rounded-sm shadow-sm hover:shadow-md transition-shadow" />
             <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Architectuur" className="w-full aspect-square object-cover rounded-sm shadow-sm hover:shadow-md transition-shadow" />
           </motion.div>

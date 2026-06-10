@@ -1,9 +1,8 @@
 import { motion } from 'motion/react';
 import HeroSection from '../components/HeroSection';
 import { AlertTriangle, Clock4, Wrench, ShieldAlert, PhoneCall } from 'lucide-react';
-import serviceFoto from '../../assets/service foto.jpg';
-
-
+import lekkageImg from '../../assets/Lekkage.jpg';
+import storingenImg from '../../assets/Storingen.jpg';
 export default function Service() {
   const services = [
     {
@@ -33,7 +32,7 @@ export default function Service() {
       <HeroSection 
         title="SERVICE & BEHEER"
         subtitle="24/7 service voor uw woningen of bedrijfspanden. Wij staan klaar wanneer u ons het hardst nodig heeft."
-        image="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+        image={lekkageImg}
       />
 
       <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -75,7 +74,7 @@ export default function Service() {
             <div className="relative overflow-hidden sm:overflow-visible">
                <div className="hidden sm:block absolute inset-0 bg-primary translate-x-4 translate-y-4"></div>
                <img 
-                 src={serviceFoto} 
+                 src={storingenImg} 
                  alt="Service Technician" 
                  className="relative z-10 w-full h-auto object-cover shadow-xl"
                />

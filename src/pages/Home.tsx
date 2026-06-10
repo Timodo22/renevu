@@ -4,8 +4,10 @@ import { Hammer, Wrench, Clock, ArrowRight, ShieldCheck, Home as HomeIcon, Zap, 
 import HeroSection from '../components/HeroSection';
 import beforeImg from '../../assets/vila before.webp';
 import afterImg from '../../assets/nep renovatie.jpg';
-import bouwVoorgrond from '../../assets/bouw voorgrond.jpg';
+import ruwbouwImg from '../../assets/Ruwbouw.jpg';
+import groepenkastImg from '../../assets/Groepenkast.jpeg';
 import techniekVoorgrond from '../../assets/techniek voorgrond.avif';
+import Logo from '../components/Logo';
 
 export default function Home() {
   const features = [
@@ -14,14 +16,14 @@ export default function Home() {
       description: 'Uw partner in renovatie, verduurzaming en turnkey verbouwingen via een uniek samenwerkingsverband met lokale specialisten.',
       icon: <Hammer className="w-8 h-8 text-white" />,
       link: '/bouw',
-      image: bouwVoorgrond,
+      image: ruwbouwImg,
     },
     {
       title: 'Techniek',
       description: 'Dé schakel in totaaltechniek met 23 jaar ervaring. Van elektrotechniek tot klimaatbeheersing en SCOPE keuringen.',
       icon: <Zap className="w-8 h-8 text-white" />,
       link: '/techniek',
-      image: techniekVoorgrond,
+      image: groepenkastImg,
     },
     {
       title: 'Service',
@@ -70,23 +72,16 @@ export default function Home() {
             </p>
           </motion.div>
           
-          {/* Right: Image */}
+          {/* Right: Logo */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
+            className="relative flex items-center justify-center bg-gray-50 rounded-2xl p-12 shadow-inner min-h-[400px]"
           >
-            {/* Background decorative box */}
-            <div className="absolute -inset-4 bg-primary/5 rounded-2xl transform rotate-2 z-0" />
-            <div className="relative z-10 overflow-hidden rounded-xl shadow-2xl aspect-[4/3] group">
-              <img 
-                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
-                alt="Vakmanschap en bouwprojecten" 
-                className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none" />
+            <div className="transform scale-125 md:scale-150">
+              <Logo variant="welcome" />
             </div>
           </motion.div>
         </div>
@@ -112,6 +107,7 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 className="group relative bg-white overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col"
               >
+                <Link to={feature.link} className="absolute inset-0 z-30" aria-label={`Ga naar ${feature.title}`}></Link>
                 <div className="h-64 overflow-hidden relative">
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors z-10 duration-500" />
                   <img 
@@ -128,13 +124,12 @@ export default function Home() {
                 <div className="p-8 flex-1 flex flex-col relative z-20 bg-white">
                   <h3 className="text-2xl font-serif text-gray-900 mb-4">{feature.title}</h3>
                   <p className="text-gray-600 mb-8 flex-1">{feature.description}</p>
-                  <Link 
-                    to={feature.link}
-                    className="inline-flex items-center text-primary font-semibold uppercase tracking-wider text-sm hover:text-primary-dark transition-colors group/link"
+                  <div 
+                    className="inline-flex items-center text-primary font-semibold uppercase tracking-wider text-sm group/link mt-auto relative z-40"
                   >
                     <span>Lees meer</span>
                     <ArrowRight className="w-5 h-5 ml-2 transform group-hover/link:translate-x-1 transition-transform" />
-                  </Link>
+                  </div>
                 </div>
               </motion.div>
             ))}

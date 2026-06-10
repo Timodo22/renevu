@@ -3,7 +3,7 @@ import { NavLink, Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { cn } from '../utils/cn';
-
+import Logo from './Logo';
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -52,24 +52,8 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Logo - Centered */}
-          <Link to="/" className="hidden md:flex flex-shrink-0 flex-col items-center z-10 mx-auto">
-            <span className={cn(
-              "font-serif text-4xl md:text-5xl tracking-widest leading-none transition-colors duration-500",
-              isScrolled ? "text-primary" : "text-white"
-            )}>
-              RENEVU
-            </span>
-            <div className={cn(
-              "h-px w-full mt-2 mb-1 bg-current opacity-50 transition-colors duration-500",
-              isScrolled ? "bg-primary" : "bg-white"
-            )}></div>
-            <span className={cn(
-              "text-xs md:text-sm tracking-[0.2em] font-light transition-colors duration-500",
-              isScrolled ? "text-gray-600" : "text-gray-200"
-            )}>
-              BOUW - TECHNIEK - SERVICE
-            </span>
+          <Link to="/" className="flex flex-shrink-0 z-10 mr-auto md:mx-4 lg:mx-auto">
+            <Logo variant="header" isScrolled={isScrolled} />
           </Link>
 
           {/* Desktop Right Nav & Hamburger */}
@@ -130,7 +114,7 @@ export default function Header() {
               className="fixed top-0 right-0 bottom-0 w-full max-w-sm bg-white z-50 shadow-xl flex flex-col md:hidden"
             >
               <div className="p-6 flex items-center justify-between border-b border-gray-100">
-                <span className="font-serif text-2xl text-primary tracking-wider">RENEVU</span>
+                <Logo variant="mobileMenu" />
                 <button
                   type="button"
                   className="p-2 text-gray-500 hover:text-gray-700"

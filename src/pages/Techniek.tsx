@@ -2,16 +2,53 @@ import { motion } from 'motion/react';
 import HeroSection from '../components/HeroSection';
 import { Zap, Droplets, Wind, Settings, Droplet, FileCheck, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import techniekVoorgrond from '../../assets/techniek voorgrond.avif';
+import groepenkastImg from '../../assets/Groepenkast.jpeg';
+import gasWaterImg from '../../assets/gas_water.jpg';
+import aircoImg from '../../assets/Airco.png';
+import ventilatieImg from '../../assets/Ventilatie.jpeg';
+import waterOnthardenImg from '../../assets/Water_ontharden.jpeg';
+import scopeGoedkeuringImg from '../../assets/SCOPE_goedkeuring.jpg';
 
 export default function Techniek() {
   const services = [
-    { name: 'Elektrotechniek', icon: <Zap className="w-8 h-8" /> },
-    { name: 'Installatie techniek (gas - water - sanitair)', icon: <Droplets className="w-8 h-8" /> },
-    { name: 'Klimaat techniek', icon: <Settings className="w-8 h-8" /> },
-    { name: 'Ventilatie techniek', icon: <Wind className="w-8 h-8" /> },
-    { name: 'Water onthardings installatie', icon: <Droplet className="w-8 h-8" /> },
-    { name: 'SCOPE keuring van woning en bedrijfslocaties', icon: <FileCheck className="w-8 h-8" /> },
+    { 
+      name: 'Elektrotechniek', 
+      icon: <Zap className="w-8 h-8" />,
+      image: groepenkastImg,
+      description: 'Aanleg, onderhoud en renovatie van veilige en moderne elektrische installaties.'
+    },
+    { 
+      name: 'Installatietechniek', 
+      subtitle: '(Gas, Water & Sanitair)',
+      icon: <Droplets className="w-8 h-8" />,
+      image: gasWaterImg,
+      description: 'Vakkundige installatie van leidingwerk, sanitair en complete gas- en waterinstallaties.'
+    },
+    { 
+      name: 'Klimaattechniek', 
+      icon: <Settings className="w-8 h-8" />,
+      image: aircoImg,
+      description: 'Optimale temperatuur en luchtvochtigheid in uw pand met energiezuinige airco\'s en klimaatoplossingen.'
+    },
+    { 
+      name: 'Ventilatietechniek', 
+      icon: <Wind className="w-8 h-8" />,
+      image: ventilatieImg,
+      description: 'Zorg voor een gezond binnenklimaat met hoogwaardige ventilatie en luchtbehandelingssystemen.'
+    },
+    { 
+      name: 'Waterontharders', 
+      icon: <Droplet className="w-8 h-8" />,
+      image: waterOnthardenImg,
+      description: 'Bescherm uw apparatuur en leidingen met een professionele wateronthardingsinstallatie.'
+    },
+    { 
+      name: 'SCOPE Keuring', 
+      subtitle: 'Voor woning en bedrijf',
+      icon: <FileCheck className="w-8 h-8" />,
+      image: scopeGoedkeuringImg,
+      description: 'Gecertificeerde veiligheidsinspecties om te voldoen aan alle wettelijke normen en eisen.'
+    },
   ];
 
   return (
@@ -19,7 +56,7 @@ export default function Techniek() {
       <HeroSection 
         title="TECHNIEK"
         subtitle="23 jaar werkzaam in allround technische werkzaamheden. De juiste schakel in totaaltechniek."
-        image={techniekVoorgrond}
+        image={groepenkastImg}
       />
 
       <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -49,12 +86,30 @@ export default function Techniek() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-gray-50 border border-gray-100 p-8 flex flex-col items-center text-center hover:bg-primary hover:text-white transition-colors duration-300 group"
+              className="group relative h-80 overflow-hidden shadow-lg flex flex-col justify-end"
             >
-              <div className="mb-6 p-4 rounded-full bg-white text-primary group-hover:bg-primary-dark group-hover:text-white transition-colors duration-300">
-                {service.icon}
+              <img src={service.image} alt={service.name} className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent group-hover:from-primary/90 group-hover:via-primary/50 transition-colors duration-500" />
+              
+              <Link to="/contact" className="absolute inset-0 z-20" aria-label={`Neem contact op over ${service.name}`}></Link>
+              
+              <div className="relative z-10 p-6 text-left flex flex-col h-full justify-end">
+                <div className="mb-auto">
+                  <div className="inline-block p-3 rounded-full bg-primary/80 text-white mb-4 backdrop-blur-sm group-hover:bg-white group-hover:text-primary transition-colors duration-300">
+                    {service.icon}
+                  </div>
+                </div>
+                
+                <h3 className="font-serif text-2xl text-white mb-1">{service.name}</h3>
+                {service.subtitle && <p className="text-gray-300 text-xs mb-3 font-semibold tracking-widest uppercase group-hover:text-white transition-colors">{service.subtitle}</p>}
+                
+                <p className="text-gray-300 text-sm mb-6 line-clamp-2 group-hover:text-white transition-colors">{service.description}</p>
+                
+                <div className="inline-flex items-center space-x-2 text-white font-semibold uppercase tracking-widest text-xs group/cta">
+                   <span>Neem contact op</span>
+                   <ArrowRight className="w-4 h-4 transform group-hover/cta:translate-x-1 transition-transform" />
+                </div>
               </div>
-              <h3 className="font-serif text-xl">{service.name}</h3>
             </motion.div>
           ))}
         </div>
