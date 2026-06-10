@@ -7,6 +7,7 @@ import afterImg from '../../assets/nep renovatie.jpg';
 import ruwbouwImg from '../../assets/Ruwbouw.jpg';
 import groepenkastImg from '../../assets/Groepenkast.jpeg';
 import techniekVoorgrond from '../../assets/techniek voorgrond.avif';
+import lekkageImg from '../../assets/Lekkage.jpg';
 import Logo from '../components/Logo';
 
 export default function Home() {
@@ -30,7 +31,7 @@ export default function Home() {
       description: 'Professioneel onderhoud en beheer. Wij staan 24/7 voor u klaar bij storingen en calamiteiten.',
       icon: <Clock className="w-8 h-8 text-white" />,
       link: '/service',
-      image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: lekkageImg,
     },
   ];
 
